@@ -1,0 +1,36 @@
+.card-header {
+    background: blue;
+    color: white;
+    border: 5px solid blue;
+    text-align: center;
+}
+
+form {
+    border: 5px solid blue;
+    padding: 20px;
+}
+
+.train-schedule-table{
+    height: 200px;
+    margin: 2% 0 2% 0;
+}
+
+table{
+    border-spacing: 50px;
+}
+
+th{
+    height: 30px;
+    text-align: center;
+    vertical-align: top;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.header-train{
+    padding: 20px;
+    margin: 20px 10px 20px 10px;
+    border-spacing: 5px;
+}

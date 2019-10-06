@@ -6,12 +6,92 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
     crossorigin="anonymous">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Document</title>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
+
+    <!-- Moment library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <title>Train Scheduler</title>
 </head>
 <body>
     
+<div class="container">
+  <br>
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <h1 class="text-center">Anytime is Train Time </h1>
+    <h2> Choo Choo. Chee Chee. </h2>
+  </div>
+
+  <!-- The table used to schedule trains. -->      
+  <div class="row train-schedule-table">
+        <!-- Sign-Up Card-->
+        <div class="col-lg-12">
+          <div class="card card-default">
+            <div class="card-header container-fluid">
+              Train Schedule 
+            </div>
+            <div class="card-body">
+              <!-- Train scheduling table -->
+              <table style="width:100%" class="train-schedule">
+                    <tr class="header-train">
+                        <th>Train Name</th>
+                        <th>Destination</th>
+                        <th>Frequency</th>
+                        <th>Next Arrival</th>
+                        <th>Minutes Away</th>
+                    </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  <div class="row">
+    <!-- Sign-Up Card-->
+    <div class="col-lg-12">
+      <div class="card card-default">
+        <div class="card-header container-fluid">
+          Add New Train Schedule 
+        </div>
+        <div class="card-body">
+
+          <!-- Train scheduling form -->
+          <form role="form">
+            <!-- Name of train input -->
+            <div class="form-group row">
+              <label for="name-input">Name:</label>
+              <input class="form-control" id="name-input-id" type="text">
+            </div>
+            <!-- Destination of train input -->
+            <div class="form-group row">
+              <label for="destination-input">Destination:</label>
+              <input class="form-control" id="destination-input-id" type="text">
+            </div>
+            <div class="form-group row">
+              <label for="time-input">First Train Time (MM/DD/YYYY HH:mm - military time)</label>
+              <input class="form-control" id="time-input-id" type="text">
+            </div>
+            <div class="form-group row">
+              <label for="frequency-input"> Frequency (min) </label>
+              <input class="form-control" id="frequency-input-id" type="number" min="0"></textarea>
+            </div>
+            <button class="btn btn-default" id="submit-schedule" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- The table used to schedule trains. -->    
+  </div>
+
+</div>
+
+<script src="asset/scripts/logic.js"></script>
+
 </body>
-<script type="text/javascript" src="asset\javascript\script.js">
-</script>
 </html>
